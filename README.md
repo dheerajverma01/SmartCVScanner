@@ -18,7 +18,7 @@ This project automates end-to-end CV screening and interview scheduling using a 
 ### 3️⃣ Agent 3: Feedback Generator
 - Adds natural language reasons
 - Updates a final `Google Sheet` or summary table
-- Logs patterns (e.g., “Most rejections due to experience”)
+- Logs patterns (e.g., "Most rejections due to experience")
 
 ### 4️⃣ Agent 4: Interview Outreach Agent
 - Picks "Shortlisted" candidates
@@ -48,3 +48,9 @@ python agents/agent_1_resume_extractor.py
 python agents/agent_2_cv_screener.py
 python agents/agent_3_feedback_generator.py
 python agents/agent_4_interview_outreach.py
+
+```
+
+from dotenv import load_dotenv
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
